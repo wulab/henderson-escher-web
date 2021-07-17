@@ -12,48 +12,10 @@
 </head>
 <body>
   <div id="bs-console"></div>
+  <script src="graphics.js"></script>
   <script src="https://unpkg.com/biwascheme/release/biwascheme-min.js"></script>
   <script type="text/biwascheme">
     (load "hello-graphics.scm")
-  </script>
-  <script>
-    function openViewport(name, width, height) {
-      var canvas = document.createElement('canvas');
-      var figure = document.createElement('figure');
-      var figcaption = document.createElement('figcaption');
-
-      figure.append(canvas);
-      figure.append(figcaption);
-      figcaption.textContent = name;
-      canvas.width = width;
-      canvas.height = height;
-
-      if (window.viewport) {
-        window.viewport.after(figure);
-      } else {
-        document.body.prepend(figure);
-      }
-
-      window.viewport = figure;
-      return window.viewport;
-    }
-
-    function drawLine(viewport, x0, y0, x1, y1) {
-      var canvas = viewport.firstElementChild;
-      var ctx = canvas.getContext('2d');
-
-      ctx.beginPath();
-      ctx.moveTo(x0, y0);
-      ctx.lineTo(x1, y1);
-      ctx.stroke();
-    }
-
-    function drawString(viewport, text, x, y) {
-      var canvas = viewport.firstElementChild;
-      var ctx = canvas.getContext('2d');
-
-      ctx.fillText(text, x, y);
-    }
   </script>
 </body>
 </html>

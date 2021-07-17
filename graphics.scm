@@ -1,11 +1,8 @@
-(define viewport 'viewport)
-
 (define (open-viewport name w h)
-  (set! viewport (js-call (js-eval "openViewport") name w h))
-  viewport)
+  (js-call (js-eval "openViewport") name w h))
 
-(define (draw-line vp x0 y0 x1 y1)
-  (js-call (js-eval "drawLine") vp x0 y0 x1 y1))
+(define (draw-line viewport x0 y0 x1 y1)
+  (js-call (js-eval "drawLine") viewport x0 y0 x1 y1))
 
-(define (draw-string vp text x y)
-  (js-call (js-eval "drawString") vp text x y))
+(define (draw-string viewport text x y)
+  (js-call (js-eval "drawString") viewport text x y))
