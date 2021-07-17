@@ -6,18 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BiwaScheme</title>
 </head>
-<body onload="draw();">
+<body>
   <canvas id="canvas"></canvas>
   <div id="bs-console"></div>
   <script src="https://unpkg.com/biwascheme/release/biwascheme-min.js"></script>
   <script type="text/biwascheme">
-    (load "hello.scm")
+    (load "hello-graphics.scm")
   </script>
   <script>
-    function draw() {
+    function drawString(str) {
       var canvas = document.getElementById('canvas');
       var ctx = canvas.getContext('2d');
-      ctx.fillText('Hello', 75, 75);
+      ctx.fillText(str, 75, 75);
     }
   </script>
 </body>
