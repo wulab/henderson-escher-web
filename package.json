@@ -8,6 +8,6 @@
     "live-server": "^1.2.1"
   },
   "scripts": {
-    "start": "live-server --ignore=.git,.gitignore,node_modules ."
+    "start": "live-server --watch=public,src --mount=/:public --mount=/:src"
   }
 }
