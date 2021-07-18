@@ -5,18 +5,14 @@ function openViewport(name, width, height) {
   var figure = document.createElement('figure');
   var figcaption = document.createElement('figcaption');
 
-  figure.append(canvas);
-  figure.append(figcaption);
-  figcaption.textContent = name;
   canvas.width = width;
   canvas.height = height;
+  figure.append(canvas);
 
-  if (window.viewports.length > 0) {
-    window.viewports[window.viewports.length - 1].after(figure);
-  } else {
-    document.body.prepend(figure);
-  }
+  figcaption.textContent = name;
+  figure.append(figcaption);
 
+  document.body.append(figure);
   window.viewports.push(figure);
 
   return figure;
