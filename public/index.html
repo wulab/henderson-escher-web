@@ -5,17 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Henderson Escher Example</title>
-  <style>
-    figure { display: inline-block; }
-    figcaption { text-align: center; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="bs-console"></div>
-  <script src="graphics.js"></script>
+  <pre id="bs-console"></pre>
+  <script src="main.js"></script>
   <script src="https://unpkg.com/biwascheme/release/biwascheme-min.js"></script>
   <script type="text/biwascheme">
-    (load "operation-test.scm")
+    (load "main.scm")
   </script>
 </body>
 </html>

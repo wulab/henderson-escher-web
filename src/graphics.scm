@@ -15,7 +15,7 @@
         (y1 (- (cdr *canvas-size*) (ycor v1))))
   (draw-line *viewport* x0 y0 x1 y1)))
 
-;; bridge to the same functions in graphics.js
+;; bridge to javascript functions
 
 (define (open-viewport name w h)
   (js-call (js-eval "openViewport") name w h))
