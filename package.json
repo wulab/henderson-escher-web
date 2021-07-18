@@ -8,6 +8,6 @@
     "live-server": "^1.2.1"
   },
   "scripts": {
-    "start": "live-server --watch=public,src --mount=/:public --mount=/:src"
+    "start": "live-server --watch=../public,../src --mount=/:src public"
   }
 }
