@@ -8,7 +8,15 @@
 ;; Based on Functional Geometry by Peter Henderson
 ;; http://pmh-systems.co.uk/phAcademic/papers/funcgeo.pdf
 
+(define f
+  (list
+   (make-segment (make-vect 0 1) (make-vect 1 1))
+   (make-segment (make-vect 1 1) (make-vect 1 0))
+   (make-segment (make-vect 1 0) (make-vect 0 0))
+   (make-segment (make-vect 0 0) (make-vect 0 1))))
+
 (define E (make-picture '()))
+(define F (make-picture f))
 (define P (make-picture p))
 (define Q (make-picture q))
 (define R (make-picture r))
@@ -43,7 +51,7 @@
   (make-viewport name
                  (rect-size size)
                  (rect-size size))
-  (pict rectangle))
+  ((overlay pict F) rectangle))
 
 (draw P  "P" 'sm)
 (draw Q  "Q" 'sm)

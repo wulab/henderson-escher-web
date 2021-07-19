@@ -20,12 +20,3 @@
    (make-segment (make-vect .40 .65) (make-vect .30 .65))
    (make-segment (make-vect .30 .65) (make-vect .15 .60))
    (make-segment (make-vect .15 .60) (make-vect   0 .85))))
-
-(define frame
-  (list
-   (make-segment (make-vect 0 1) (make-vect 1 1))
-   (make-segment (make-vect 1 1) (make-vect 1 0))
-   (make-segment (make-vect 1 0) (make-vect 0 0))
-   (make-segment (make-vect 0 0) (make-vect 0 1))))
-
-(define george-in-frame (append george frame))

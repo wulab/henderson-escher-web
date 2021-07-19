@@ -20,6 +20,11 @@
 
 ;; means of combination
 
+(define (overlay p q)
+  (lambda (rect)
+    (p rect)
+    (q rect)))
+
 (define (beside m n p q)
   (lambda (rect)
     (define a (/ m (+ m n)))
