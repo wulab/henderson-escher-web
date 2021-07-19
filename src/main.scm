@@ -1,5 +1,7 @@
-(display "Loading operation-test.scm ... ")
+(define (load-verbose filename)
+  (display (string-append "Loading " filename " ... "))
+  (load filename)
+  (display "done.")
+  (newline))
 
-(load "operation-test.scm")
-
-(display "done.")
+(load-verbose "operation-test.scm")
