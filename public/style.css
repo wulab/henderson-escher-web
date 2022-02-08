@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 figure {
   display: inline-block;
 }
